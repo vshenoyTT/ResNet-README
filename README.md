@@ -3,7 +3,9 @@
 # TT-NN ResNet50 Demo
 
 ## Introduction
-Demo is in progress. ResNet50 is a deep convolutional neural network architecture with 50 layers, designed to enable training of very deep networks by using residual learning to mitigate the vanishing gradient problem.
+ResNet50 is a deep convolutional neural network architecture with 50 layers, designed to enable training of very deep networks by using residual learning to mitigate the vanishing gradient problem.
+
+Demo is a *work in progress*. 
 
 ## Details
 
