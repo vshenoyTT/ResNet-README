@@ -22,7 +22,7 @@ Demo is in progress. ResNet50 is a deep convolutional neural network architectur
 #### End-to-End Performance
 + For end-to-end performance, run `WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_bare_metal[16-0.004-25-device_params0]`. 
 + This will generate a CSV with the timings and throughputs.
-+ Expected end-to-end perf: For batch = 16, it is about `4300 fps` currently. This may vary machine to machine.
++ **Expected end-to-end perf**: For batch = 16, it is about `4300 fps` currently. This may vary machine to machine.
 
 ### T3000
 #### End-to-End Performance
