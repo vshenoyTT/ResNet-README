@@ -5,7 +5,7 @@
 ## Introduction
 ResNet50 is a deep convolutional neural network architecture with 50 layers, designed to enable training of very deep networks by using residual learning to mitigate the vanishing gradient problem.
 
-The demo is a work in progress. 
+This demo is a work in progress. 
 
 ## Details
 
