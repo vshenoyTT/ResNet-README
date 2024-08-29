@@ -1,1 +1,0 @@
-WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/multi_device/test_ttnn_resnet50_performant.py

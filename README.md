@@ -1,5 +1,3 @@
----
-
 # ResNet50 Demo
 
 ## Introduction
@@ -18,16 +16,33 @@ This demo is a work in progress.
 ### Single Device
 
 #### Device Performance
-+ To obtain device performance, run `WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml ./tt_metal/tools/profiler/profile_this.py -c "pytest models/demos/ttnn_resnet/tests/test_ttnn_resnet50_performant.py::test_run_resnet50_inference[16z-act_dtype0-weight_dtype0-math_fidelity0-device_params0]"`
+
++ To obtain device performance, run: 
+```sh
+WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml ./tt_metal/tools/profiler/profile_this.py -c "pytest models/demos/ttnn_resnet/tests/test_ttnn_resnet50_performant.py::test_run_resnet50_inference[16z-act_dtype0-weight_dtype0-math_fidelity0-device_params0]"
+```
+
 + This will generate a CSV report under `<this repo dir>/generated/profiler/reports/ops/<report name>`. The report file name is logged in the run output.
 
 #### End-to-End Performance
-+ For end-to-end performance, run `WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_bare_metal[16-0.004-25-device_params0]`. 
++ For end-to-end performance, run:
+
+```sh
+WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_bare_metal[16-0.004-25-device_params0]
+```
+
 + This will generate a CSV with the timings and throughputs.
 + **Expected end-to-end perf**: For batch = 16, it is about `4300 fps` currently. This may vary machine to machine.
 
 ### T3000
+
 #### End-to-End Performance
-+ For end-to-end performance, run `WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/multi_device/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_t3000[wormhole_b0-True-16-True-0.0043-60-device_params0]`. 
+
++ For end-to-end performance, run 
+
+```sh
+WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/multi_device/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_t3000[wormhole_b0-True-16-True-0.0043-60-device_params0]
+```
+
 + This will generate a CSV with the timings and throughputs.
 + **Expected end-to-end perf**: For batch = 16 per device, or batch 128 in total, it is about `31,700 fps` currently. This may vary machine to machine.
