@@ -18,7 +18,7 @@ This demo is a work in progress.
 #### Device Performance
 
 + To obtain device performance, run: 
-```sh
+```bash
 WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml ./tt_metal/tools/profiler/profile_this.py -c "pytest models/demos/ttnn_resnet/tests/test_ttnn_resnet50_performant.py::test_run_resnet50_inference[16z-act_dtype0-weight_dtype0-math_fidelity0-device_params0]"
 ```
 
@@ -27,7 +27,7 @@ WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml ./tt_metal/tools/profiler/pro
 #### End-to-End Performance
 + For end-to-end performance, run:
 
-```sh
+```bash
 WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_bare_metal[16-0.004-25-device_params0]
 ```
 
@@ -40,7 +40,7 @@ WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resn
 
 + For end-to-end performance, run 
 
-```sh
+```bash
 WH_ARCH_YAML=wormhole_b0_80_arch_eth_dispatch.yaml pytest models/demos/ttnn_resnet/tests/multi_device/test_perf_ttnn_resnet.py::test_perf_trace_2cqs_t3000[wormhole_b0-True-16-True-0.0043-60-device_params0]
 ```
 
